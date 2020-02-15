@@ -14,10 +14,6 @@ Solution for rp - find longest and shortest word in a sentence
 3. The length of a word is not unit tested, as this is an implicit property of class String. Correctness of Java system library classes should not be unit tested.
 
 ## Run unit tests
-1. Project is a simple maven project. So you need to have maven set up.
+1. Project is a simple maven project. You need to have maven set up on your machine: E.g. see installation instructions here (no guarantee that it works on your system): https://www.baeldung.com/install-maven-on-windows-linux-mac
 2. Run tests from command line: Open console or terminal, and navigate to the root folder of the project. Then execute this: mvn test
 3. Or run tests from IDE of your choice.
-
-
-
-

@@ -8,13 +8,13 @@ import static org.junit.Assert.*;
 public class LongestWordInSentenceTest {
 
     @Test
-    public void shouldReturnEmptyString() throws Exception {
+    public void shouldReturnEmptyStringWhenSentenceEmpty() throws Exception {
         String word = SentenceAnalyzer.getFirstLongestWord("");
         assertEquals("", word);
     }
 
     @Test
-    public void shouldReturnFirstLongestWord() throws Exception {
+    public void shouldReturnFirstLongestWordWhenSeveralWordsSameLength() throws Exception {
         String word = SentenceAnalyzer.getFirstLongestWord("The bigger cows jumped over the moon.");
         assertEquals("bigger", word);
     }
@@ -41,5 +41,11 @@ public class LongestWordInSentenceTest {
     public void shouldTreatApostrophesAsNonWordCharacter() throws Exception {
         String word = SentenceAnalyzer.getFirstLongestWord("Baird's cows jumped over the moon.");
         assertEquals("jumped", word);
+    }
+
+    @Test
+    public void shouldTreatUnderscoreAsWordCharacter() throws Exception {
+        String word = SentenceAnalyzer.getFirstLongestWord("The cows jumped over the _beatiful_ moon.");
+        assertEquals("_beatiful_", word);
     }
 }

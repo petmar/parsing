@@ -45,7 +45,7 @@ public class LongestWordInSentenceTest {
 
     @Test
     public void shouldTreatUnderscoreAsWordCharacter() throws Exception {
-        String word = SentenceAnalyzer.getFirstLongestWord("The cows jumped over the _beatiful_ moon.");
-        assertEquals("_beatiful_", word);
+        String word = SentenceAnalyzer.getFirstLongestWord("The cows jumped over the _beautiful_ moon.");
+        assertEquals("_beautiful_", word);
     }
 }
